@@ -1,0 +1,258 @@
+@import "Style-general.scss";
+
+.page_how-work-block {
+    @extend._container;
+    margin-top: 90px;
+}
+
+.how-work-block__title {
+    @include text('Montserrat', 26px, 700, 120%, $color-title-dark);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+@media screen and (max-width: 880px) {
+.how-work-block__title {
+    @include text('Montserrat', 22px, 700, 120%, $color-title-dark);
+}
+}
+
+.how-work-block_steps {
+    width: 100%;
+@extend.justify-content-between;
+
+}
+
+@media screen and (max-width: 540px) {
+    .page_how-work-block {
+        margin-top: 35px;
+    }
+
+    .how-work-block__title {
+        margin-bottom: 15px;
+    }
+
+    .how-work-block_steps {
+        flex-direction: column
+    }
+
+    .how-work-step-1,
+    .how-work-step-2,
+    .how-work-step-3 {
+        width: 100%;
+    }
+}
+
+.how-work-step-1,
+.how-work-step-3 {
+    @extend.width-32;
+
+    .how-work-step-1_body,
+    .how-work-step-3_body {
+        @extend.rel-ind-10;
+      
+        padding: 219px 21px 16px 29px;
+
+        .how-work-step-1_button,
+        .how-work-step-3_button {
+            @extend.button;
+            @include button-size(70px, 20px, 5px, 14px, 3px, 14px);
+            background-color: $color-button;
+
+            .how-work-step-1__btn-link,
+            .how-work-step-3__btn-link {
+                @include text('Montserrat', 10px, 400, 120%, $color-title-light);
+                text-transform: uppercase;
+            }
+        }
+
+        .how-work-step-1__title,
+        .how-work-step-3__title {
+            @include text('Montserrat', 24px, 700, 120%, $color-title-light);
+            margin-top: 15px;
+            margin-bottom: 25px;
+        }
+
+        .how-work-step-1__text,
+        .how-work-step-3__text {
+            @include text('Roboto', 14px, 300, 100%, #E3E3E3);
+        }
+    }
+
+    .how-work-step-1__image-card,
+    .how-work-step-3__image-card {
+
+        .image_how-work-step-1,
+        .image_how-work-step-3 {
+            @extend.img-background;
+        }
+    }
+}
+
+.how-work-step-2 {
+    @extend.width-32;
+
+    .how-work-step-2_body {
+       @extend.rel-ind-10;
+   
+        padding: 248px 25px 21px 25px;
+
+        .how-work-step-2_button {
+            @extend.button;
+            @include button-size(70px, 20px, 5px, 14px, 3px, 14px);
+            background-color: $color-button;
+
+            .how-work-step-2__btn-link {
+                @include text('Montserrat', 10px, 400, 120%, $color-title-light);
+                text-transform: uppercase;
+            }
+        }
+
+        .how-work-step-2__title {
+            @include text('Montserrat', 24px, 700, 120%, $color-title-light);
+            margin-top: 17px;
+            margin-bottom: 23px;
+        }
+
+        .how-work-step-2__text {
+            @include text('Roboto', 14px, 300, 100%, #E3E3E3);
+        }
+    }
+
+    .how-work-step-2__image-card {
+
+        .image_how-work-step-2 {
+            @extend.img-background;
+        }
+    }
+}
+
+@media screen and (max-width: 820px) {
+
+    .how-work-step-1,
+    .how-work-step-3 {
+
+        .how-work-step-1_body,
+        .how-work-step-3_body {
+            padding: 205px 20px 10px 20px;
+
+            .how-work-step-1__title,
+            .how-work-step-3__title {
+                line-height: 0.8;
+                margin-top: 43px;
+                margin-bottom: 28px;
+            }
+        }
+    }
+
+    .how-work-step-2 {
+
+        .how-work-step-2_body {
+            padding: 250px 20px 16px 20px;
+
+            .how-work-step-2__title {
+                line-height: 0.8;
+                margin-top: 17px;
+                margin-bottom: 27px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 650px) {
+
+    .how-work-step-1,
+    .how-work-step-3 {
+
+        .how-work-step-1_body,
+        .how-work-step-3_body {
+            padding: 205px 8px 10px 8px;
+
+            .how-work-step-1__title,
+            .how-work-step-3__title {
+                @include text('Montserrat', 20px, 700, 100%, $color-title-light);
+
+                margin-top: 43px;
+                margin-bottom: 28px;
+            }
+
+            .how-work-step-1__text,
+            .how-work-step-3__text {
+                @include text('Roboto', 14px, 300, 100%, #E3E3E3);
+            }
+        }
+    }
+
+    .how-work-step-2 {
+
+        .how-work-step-2_body {
+            padding: 250px 8px 16px 8px;
+
+            .how-work-step-2__title {
+                @include text('Montserrat', 20px, 700, 100%, $color-title-light);
+                margin-top: 17px;
+                margin-bottom: 27px;
+            }
+
+            .how-work-step-2__text {
+                @include text('Roboto', 14px, 300, 100%, #E3E3E3);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .how-work-step-1,
+    .how-work-step-3 {
+
+        .how-work-step-1_body,
+        .how-work-step-3_body {
+            padding: 254px 50px 30px 20px;
+
+            .how-work-step-1__title,
+            .how-work-step-3__title {
+                margin-top: 35px;
+                margin-bottom: 25px;
+            }
+        }
+    }
+
+    .how-work-step-2 {
+        margin-top: 10px;
+        margin-bottom: 10px;
+
+        .how-work-step-2_body {
+            padding: 285px 50px 30px 20px;
+
+            .how-work-step-2__title {
+                margin-top: 17px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .how-work-step-1,
+    .how-work-step-3 {
+
+        .how-work-step-1_body,
+        .how-work-step-3_body {
+            padding: 74px 30px 16px 20px;
+        }
+    }
+
+    .how-work-step-2 {
+
+        .how-work-step-2_body {
+            padding: 110px 50px 16px 20px;
+
+            .how-work-step-2__title {
+                margin-top: 31px;
+                margin-bottom: 17px;
+            }
+        }
+    }
+}

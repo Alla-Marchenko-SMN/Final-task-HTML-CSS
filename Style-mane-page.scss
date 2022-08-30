@@ -1,0 +1,95 @@
+@import "Style-general.scss";
+
+.page_main-block {
+  position: relative;
+}
+
+.main-block_container {
+  @extend._container;
+}
+
+.main-block_body {
+  @extend.rel-ind-10;
+  padding: 220px 235px 200px 235px;
+
+  .main-block__title {
+    @include text('Montserrat', 52px, 700, 120%, $color-title-light);
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  .main-block__text {
+    @include text('Roboto', 24px, 300, 100%, #F7F3F2);
+    text-align: center;
+  }
+
+
+  .header_button {
+    @extend.button;
+    @extend.justify-content-center;
+    @include button-size(250px, 40px, 12px, 18px, 12px, 18px);
+    background-color: $color-button;
+    margin: 33px auto;
+
+    .header__btn-link {
+      @include text('Montserrat', 14px, 700, 120%, $color-title-light);
+    }
+  }
+}
+
+.main-block__image {
+
+  .image-main {
+    @extend.img-background;
+  }
+}
+
+@media screen and (max-width: 952px) {
+  .main-block_body {
+    padding: 220px 160px 200px 160px;
+  }
+}
+
+@media screen and (max-width: 802px) {
+  .main-block_body {
+    padding: 220px 100px 200px 100px;
+  }
+}
+
+@media screen and (max-width: 682px) {
+  .main-block_body {
+    padding: 220px 30px 200px 30px;
+  }
+}
+
+@media screen and (max-width: 543px) {
+  .main-block_body {
+    padding: 203px 26px 100px 26px;
+
+    .main-block__title {
+      @include text('Montserrat', 40px, 700, 120%, $color-title-light);
+      margin-bottom: 5px;
+    }
+
+    .main-block__text {
+      @include text('Roboto', 18px, 300, 100%, #F7F3F2);
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .main-block_body {
+    padding: 220px 26px 200px 26px;
+
+    .main-block__title {
+      @include text('Montserrat', 30px, 700, 120%, $color-title-light);
+      margin-bottom: 5px;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .main-block_body {
+    padding: 203px 16px 153px 16px;
+  }
+}

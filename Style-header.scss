@@ -1,0 +1,58 @@
+
+@import "Style-general.scss";
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 20;
+
+    .header_block {
+        @extend._container;
+        @extend.justify-content-between;
+        min-height: 80px;
+        align-items: center;
+        margin-top: 20px;
+
+        .header_logo {
+            @include text('Montserrat', 20px, 700, 120%, $color-title-light);
+            text-transform: uppercase;
+        }
+
+        .header_buttons {
+            display: flex;
+
+            .header_button{
+                @extend.button;
+                @include button-size(90px, 36px, 10px, 15px, 10px, 15px);
+                background-color: transparent;
+            }
+
+            .btn-link {
+                @include text('Montserrat', 14px, 400, 120%, $color-title-light);
+            }
+
+            .header_button:hover{
+                border: 1px $color-title-light solid;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px){
+    .header_block {
+        .header_logo{
+            margin-left: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .header_block {
+        flex-direction: column-reverse;
+    }
+    .header_logo{
+        margin-top: 97px;
+    }
+}

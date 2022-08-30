@@ -1,0 +1,111 @@
+@import "Style-general.scss";
+
+ul,
+li {
+    list-style: none;
+}
+
+.footer {
+    margin-top: 100px;
+    margin-bottom: 36px;
+    border-top: 3px solid $color-button;
+}
+
+.footer-block {
+    @extend._container;
+    margin-top: 38px;
+    @extend.justify-content-between;
+}
+
+.foote-logo {
+    text-transform: uppercase;
+    @include text('Montserrat', 16px, 400, 120%, $color-button);
+}
+
+.footer-menu {
+    .footer-menu__title {
+        @include text('Montserrat', 14px, 700, 120%, $color-title-dark);
+        margin-bottom: 11px;
+    }
+
+    .menu__link {
+        @include text('Roboto', 14px, 300, 186%, #999999);
+    }
+}
+
+.footer-partner-info__title {
+    @include text('Montserrat', 14px, 700, 120%, $color-title-dark);
+}
+
+.footer-designer-logo {
+
+    .designer-logo__title {
+        @include text('Montserrat', 10px, 700, 120%, #CCCCCC);
+        text-transform: uppercase;
+        text-align: end;
+        margin-bottom: 7px;
+    }
+
+    .designer-logo {
+        width: 110px;
+        height: 24px;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .foote-logo {
+        margin-left: 10px;
+    }
+
+    .footer-designer-logo {
+        margin-right: 10px;
+    }
+}
+
+@media screen and (max-width: 540px) {
+
+    .footer {
+        margin-top: 40px;
+    }
+
+    .footer-block {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 19px;
+    }
+
+    .foote-logo {
+        margin-left: 0px;
+    }
+
+    .footer-menu {
+        width: 280px;
+        margin-top: 13px;
+        margin-bottom: 7px;
+
+        .footer-menu__title {
+            margin-bottom: 0px;
+            text-align: center;
+        }
+
+        .menu__list {
+
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 0px 30px 0px 30px;
+
+            .menu__item {
+                margin: 0px 15px 0px 0px;
+            }
+        }
+    }
+
+    .footer-designer-logo {
+
+        .designer-logo__title {
+            margin-top: 14px;
+            text-align: center;
+        }
+    }
+}

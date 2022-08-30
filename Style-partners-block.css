@@ -1,0 +1,301 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  height: 100%;
+  line-height: 1;
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-height: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url(./Fonts/Montserrat-Medium.ttf);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(./Fonts/Roboto-Regular.ttf);
+}
+.page {
+  flex: 1 1 auto;
+}
+
+._container, .page_partners-block {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+.img-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.button, .partner-block_button .partner__btn {
+  text-align: center;
+  border-radius: 45px;
+}
+
+.width-32 {
+  position: relative;
+  width: 32%;
+}
+
+.rel-ind-10 {
+  position: relative;
+  z-index: 10;
+}
+
+.justify-content-center, .partner-block_button {
+  display: flex;
+  justify-content: center;
+}
+
+.justify-content-between, .partners-block_cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-foto, .card-partner-4__foto, .card-partner-3__foto, .card-partner-2__foto, .card-partner-1__foto {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.foto-img, .card-partner-4__foto .foto-4__img, .card-partner-3__foto .foto-3__img, .card-partner-2__foto .foto-2__img, .card-partner-1__foto .foto-1__img {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.foto-icon, .card-partner-4__foto .foto-4__icon, .card-partner-3__foto .foto-3__icon, .card-partner-2__foto .foto-2__icon, .card-partner-1__foto .foto-1__icon {
+  position: absolute;
+  top: 87px;
+  left: 87px;
+  width: 30px;
+  height: 30px;
+  outline: 4px solid white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon, .card-partner-4__foto .foto-4__icon .icon-plane, .card-partner-3__foto .foto-3__icon .icon-camera, .card-partner-2__foto .foto-2__icon .icon-brush, .card-partner-1__foto .foto-1__icon .icon-music {
+  width: 18px;
+  height: 18px;
+}
+
+.title-partner-margine, .card-partner-1_info .card-partner-1__title,
+.card-partner-1_info .card-partner-2__title,
+.card-partner-1_info .card-partner-3__title,
+.card-partner-1_info .card-partner-4__title,
+.card-partner-2_info .card-partner-1__title,
+.card-partner-2_info .card-partner-2__title,
+.card-partner-2_info .card-partner-3__title,
+.card-partner-2_info .card-partner-4__title,
+.card-partner-3_info .card-partner-1__title,
+.card-partner-3_info .card-partner-2__title,
+.card-partner-3_info .card-partner-3__title,
+.card-partner-3_info .card-partner-4__title,
+.card-partner-4_info .card-partner-1__title,
+.card-partner-4_info .card-partner-2__title,
+.card-partner-4_info .card-partner-3__title,
+.card-partner-4_info .card-partner-4__title {
+  margin-top: 17px;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.page_partners-block {
+  margin-top: 90px;
+}
+
+.partners-block__title {
+  font-family: "Montserrat";
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #444444;
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.partners-block_cards {
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.card-partner-1_info,
+.card-partner-2_info,
+.card-partner-3_info,
+.card-partner-4_info {
+  width: 221px;
+}
+.card-partner-1_info .card-partner-1__title,
+.card-partner-1_info .card-partner-2__title,
+.card-partner-1_info .card-partner-3__title,
+.card-partner-1_info .card-partner-4__title,
+.card-partner-2_info .card-partner-1__title,
+.card-partner-2_info .card-partner-2__title,
+.card-partner-2_info .card-partner-3__title,
+.card-partner-2_info .card-partner-4__title,
+.card-partner-3_info .card-partner-1__title,
+.card-partner-3_info .card-partner-2__title,
+.card-partner-3_info .card-partner-3__title,
+.card-partner-3_info .card-partner-4__title,
+.card-partner-4_info .card-partner-1__title,
+.card-partner-4_info .card-partner-2__title,
+.card-partner-4_info .card-partner-3__title,
+.card-partner-4_info .card-partner-4__title {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #444444;
+}
+.card-partner-1_info .card-partner-1__text,
+.card-partner-1_info .card-partner-2__text,
+.card-partner-1_info .card-partner-3__text,
+.card-partner-1_info .card-partner-4__text,
+.card-partner-2_info .card-partner-1__text,
+.card-partner-2_info .card-partner-2__text,
+.card-partner-2_info .card-partner-3__text,
+.card-partner-2_info .card-partner-4__text,
+.card-partner-3_info .card-partner-1__text,
+.card-partner-3_info .card-partner-2__text,
+.card-partner-3_info .card-partner-3__text,
+.card-partner-3_info .card-partner-4__text,
+.card-partner-4_info .card-partner-1__text,
+.card-partner-4_info .card-partner-2__text,
+.card-partner-4_info .card-partner-3__text,
+.card-partner-4_info .card-partner-4__text {
+  font-family: "Roboto";
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 120%;
+  color: #666666;
+  text-align: center;
+}
+
+.card-partner-1__foto .foto-1__img {
+  background-image: url(./imgs/Bitmap.png);
+}
+.card-partner-1__foto .foto-1__icon {
+  background: #FF4E50;
+}
+.card-partner-1__foto .foto-1__icon .icon-music {
+  background: url(./icons/music.svg);
+}
+
+.card-partner-2__foto .foto-2__img {
+  background-image: url(./imgs/Bitmap-2.png);
+}
+.card-partner-2__foto .foto-2__icon {
+  background: #19D4CA;
+}
+.card-partner-2__foto .foto-2__icon .icon-brush {
+  background: url(./icons/pen.svg);
+}
+
+.card-partner-3__foto .foto-3__img {
+  background-image: url(./imgs/Bitmap-3.png);
+}
+.card-partner-3__foto .foto-3__icon {
+  background: #FFA710;
+}
+.card-partner-3__foto .foto-3__icon .icon-camera {
+  background: url(./icons/camera.svg);
+}
+
+.card-partner-4__foto .foto-4__img {
+  background-image: url(./imgs/Bitmap-4.png);
+}
+.card-partner-4__foto .foto-4__icon {
+  background: #667DF3;
+}
+.card-partner-4__foto .foto-4__icon .icon-plane {
+  background: url(./icons/plane.svg);
+}
+
+.partner-block_button {
+  margin-top: 36px;
+}
+.partner-block_button .partner__btn {
+  width: 180px;
+  min-height: 40px;
+  padding-top: 12px;
+  padding-right: 19px;
+  padding-bottom: 11px;
+  padding-left: 24px;
+  background-color: transparent;
+  border: 2px solid #FF4E50;
+}
+.partner-block_button .partner__btn .partner__btn-link {
+  font-family: "Montserrat";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 120%;
+  color: #FF4E50;
+}
+
+@media screen and (max-width: 880px) {
+  .page_partners-block {
+    max-width: 492px;
+  }
+  .card-partner-4_info,
+.card-partner-3_info {
+    margin-top: 35px;
+  }
+  .partners-block__title {
+    font-family: "Montserrat";
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 120%;
+    color: #444444;
+  }
+}
+@media screen and (max-width: 540px) {
+  .page_partners-block {
+    max-width: 236px;
+    margin-top: 35px;
+  }
+  .partners-block__title {
+    margin-bottom: 5px;
+  }
+  .card-partner-1_info,
+.card-partner-2_info,
+.card-partner-3_info,
+.card-partner-4_info {
+    margin-top: 16px;
+  }
+  .partner-block_button .partner__btn {
+    width: 280px;
+    min-height: 40px;
+    padding-top: 12px;
+    padding-right: 19px;
+    padding-bottom: 11px;
+    padding-left: 24px;
+  }
+}/*# sourceMappingURL=Style-partners-block.css.map */

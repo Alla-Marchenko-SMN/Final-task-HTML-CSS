@@ -1,0 +1,216 @@
+@import "Style-general.scss";
+
+// Шаблони
+// For foto -------------------
+
+.card-foto {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.foto-img {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+}
+
+.foto-icon {
+    position: absolute;
+    top: 87px;
+    left: 87px;
+    width: 30px;
+    height: 30px;
+    outline: 4px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon {
+    width: 18px;
+    height: 18px;
+}
+
+// for title
+
+.title-partner-margine {
+    margin-top: 17px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+// ----------------------------------------------
+
+.page_partners-block {
+    @extend._container;
+    margin-top: 90px;
+}
+
+.partners-block__title {
+    @include text('Montserrat', 26px, 700, 120%, $color-title-dark);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.partners-block_cards {
+    width: 100%;
+    @extend.justify-content-between;
+    flex-wrap: wrap;
+}
+
+.card-partner-1_info,
+.card-partner-2_info,
+.card-partner-3_info,
+.card-partner-4_info {
+    width: 221px;
+
+    .card-partner-1__title,
+    .card-partner-2__title,
+    .card-partner-3__title,
+    .card-partner-4__title {
+        @extend.title-partner-margine;
+        @include text('Montserrat', 14px, 700, 120%, $color-title-dark);
+    }
+
+    .card-partner-1__text,
+    .card-partner-2__text,
+    .card-partner-3__text,
+    .card-partner-4__text {
+        @include text('Roboto', 14px, 300, 120%, $color-dark-gray);
+        text-align: center;
+    }
+}
+
+.card-partner-1__foto {
+    @extend.card-foto;
+
+    .foto-1__img {
+        @extend.foto-img;
+        background-image: url(./imgs/Bitmap.png);
+    }
+
+    .foto-1__icon {
+        @extend.foto-icon;
+        background: #FF4E50;
+
+        .icon-music {
+            @extend.icon;
+            background: url(./icons/music.svg);
+        }
+    }
+}
+
+.card-partner-2__foto {
+    @extend.card-foto;
+
+    .foto-2__img {
+        @extend.foto-img;
+        background-image: url(./imgs/Bitmap-2.png);
+    }
+
+    .foto-2__icon {
+        @extend.foto-icon;
+        background: #19D4CA;
+
+        .icon-brush {
+            @extend.icon;
+            background: url(./icons/pen.svg);
+        }
+    }
+}
+
+.card-partner-3__foto {
+    @extend.card-foto;
+
+    .foto-3__img {
+        @extend.foto-img;
+        background-image: url(./imgs/Bitmap-3.png);
+    }
+
+    .foto-3__icon {
+        @extend.foto-icon;
+        background: #FFA710;
+
+        .icon-camera {
+            @extend.icon;
+            background: url(./icons/camera.svg);
+        }
+    }
+}
+
+.card-partner-4__foto {
+    @extend.card-foto;
+
+    .foto-4__img {
+        @extend.foto-img;
+        background-image: url(./imgs/Bitmap-4.png);
+    }
+
+    .foto-4__icon {
+        @extend.foto-icon;
+        background: #667DF3;
+
+        .icon-plane {
+            @extend.icon;
+            background: url(./icons/plane.svg);
+        }
+    }
+}
+
+.partner-block_button {
+    margin-top: 36px;
+    @extend.justify-content-center;
+
+    .partner__btn {
+        @extend.button;
+        @include button-size(180px, 40px, 12px, 19px, 11px, 24px);
+        background-color: transparent;
+        border: 2px solid $color-button;
+
+        .partner__btn-link {
+            @include text('Montserrat', 14px, 700, 120%, $color-button);
+        }
+    }
+}
+
+@media screen and(max-width: 880px){
+
+    .page_partners-block {
+        max-width: 492px;
+    }
+
+    .card-partner-4_info,
+    .card-partner-3_info{
+        margin-top: 35px;
+    }
+
+    .partners-block__title {
+        @include text('Montserrat', 22px, 700, 120%, $color-title-dark);
+    }
+}
+
+@media screen and(max-width: 540px) {
+    .page_partners-block {
+        max-width: 236px;
+        margin-top: 35px;
+    }
+    .partners-block__title {
+        margin-bottom: 5px;
+    }
+
+    .card-partner-1_info,
+    .card-partner-2_info,
+    .card-partner-3_info,
+    .card-partner-4_info{
+        margin-top: 16px;
+    }
+
+    .partner-block_button{
+        .partner__btn {
+        @include button-size(280px, 40px, 12px, 19px, 11px, 24px);
+        }
+    }
+}
+

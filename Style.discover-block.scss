@@ -1,0 +1,203 @@
+@import "Style-general.scss";
+
+// Шаблони
+
+.title-position {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+}
+
+.title-margin_1 {
+    margin: 142px 15px 141px 15px;
+}
+
+// -------------------------------
+
+.page_discover-block {
+    @extend._container;
+    margin-top: 90px;
+}
+
+.discover-block__title {
+    @include text('Montserrat', 26px, 700, 120%, $color-title-dark);
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.discover-block_cards {
+    width: 100%;
+    @extend.justify-content-between;
+    flex-wrap: wrap;
+}
+
+.card-sport,
+.card-health,
+.card-extreme,
+.card-games,
+.card-trevelling {
+    @extend.width-32;
+
+    .card-sport__title,
+    .card-health__title,
+    .card-extreme__title,
+    .card-games__title,
+    .card-trevelling__title {
+        @extend.title-position;
+        @extend.title-margin_1;
+        @include text('Montserrat', 22px, 700, 120%, $color-title-light);
+    }
+
+    .card-sport__image,
+    .card-health__image,
+    .card-extreme__image,
+    .card-games__image,
+    .card-trevelling__image {
+        @extend.block-img;
+        background-color: #666666;
+
+        .image-sport,
+        .image-health,
+        .image-extreme,
+        .image-games,
+        .image-trevelling {
+            @extend.img-background;
+            opacity: 0.7;
+        }
+    }
+}
+
+.card-culture,
+.card-relaxation {
+    position: relative;
+    width: 66%;
+
+    .card-culture__title,
+    .card-relaxation__title {
+        @extend.title-position;
+        @extend.title-margin_1;
+        @include text('Montserrat', 22px, 700, 120%, $color-title-light);
+    }
+
+    .card-culture__image,
+    .card-relaxation__image {
+        @extend.block-img;
+        background-color: #666666;
+
+        .image-culture,
+        .image-relaxation {
+            @extend.img-background;
+            opacity: 0.9;
+        }
+    }
+}
+
+.card-extreme {
+
+    .card-extreme__title {
+        margin: 128px 15px 128px 15px;
+    }
+}
+
+.card-games,
+.card-culture {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+@media screen and(max-width: 880px) {
+    .discover-block__title {
+        @include text('Montserrat', 22px, 700, 120%, $color-title-dark);
+    }
+
+    .card-sport,
+    .card-health {
+
+        .card-sport__title,
+        .card-health__title {
+            margin: 129px 25px 128px 25px;
+        }
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .page_discover-block {
+        margin-top: 36px;
+    }
+
+    .discover-block__title {
+        margin: 0px 60px 30px 60px;
+    }
+
+    .discover-block_cards {
+        flex-direction: column;
+    }
+
+    .card-sport,
+    .card-health,
+    .card-extreme,
+    .card-games,
+    .card-trevelling,
+    .card-culture,
+    .card-relaxation {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .card-games,
+    .card-culture {
+        margin-top: 0px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    .card-sport,
+    .card-health,
+    .card-extreme,
+    .card-games,
+    .card-trevelling,
+    .card-culture,
+    .card-relaxation {
+
+        .card-sport__title,
+        .card-health__title,
+        .card-extreme__title {
+            margin: 63px 80px;
+        }
+
+        .card-games__title,
+        .card-trevelling__title,
+        .card-culture__title,
+        .card-relaxation__title {
+            margin: 76px 11px;
+        }
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .card-sport,
+    .card-health,
+    .card-extreme,
+    .card-games,
+    .card-trevelling,
+    .card-culture,
+    .card-relaxation {
+
+        .card-sport__title{
+            margin: 50px 57px;
+        }
+        .card-health__title,
+        .card-extreme__title {
+            margin: 50px 47px;
+        }
+
+        .card-games__title,
+        .card-trevelling__title,
+        .card-culture__title,
+        .card-relaxation__title {
+            margin: 63px 11px;
+        }
+    }
+}
